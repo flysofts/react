@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { styled } from 'styled-components';
 
 function Contents(props) {
     let Title = ["쌍둥이 아기판다", "쌍둥이 아기판다", "주토피아 동물 아카데미", "귀엽게 찰칵!"]
@@ -32,19 +33,21 @@ function Contents(props) {
 
   return (
     <>
-          <div div className = 'content-item' onClick={Modal}>    
+          <div className = 'content-item' onClick={Modal}>    
             <img src="https://via.placeholder.com/320" alt="테스트" />
-            <h3>{Title[props.arrayNum]}</h3>
-            <p>{Desc[props.arrayNum]}</p>
-            
+            <h3 className='font-bold text-2xl my-1 text-green-500'>{Title[props.arrayNum]}</h3>
+            <p>{Desc[props.arrayNum]}</p>            
             <p onClick={goodFun}>👍{good}</p>
             <button onClick={Change}>수정</button>
             {/* window + . */}
           </div>
+          
           {
             (modalChk === true && <div className='window'></div>)
           }
+          
           </>
+          
   )
 }
 
